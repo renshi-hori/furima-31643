@@ -11,7 +11,7 @@
 | first_name         | string              | null: false             |
 | last_name_kana     | string              | null: false             |
 | first_name_kana    | string              | null: false             |
-| birth_data         | string              | null: false             |
+| birth_data         | deta              | null: false             |
 
 
 
@@ -30,12 +30,12 @@
 | Column                         | Type       | Options           |
 |--------------------------------|------------|-------------------|
 | name                      | string     | null: false       |
-| category                  | string     | null: false       |
-| sales-status              | string     | null: false       |
-| info                      | string     | null: false       |
-| shipping_free-status      | string     | null: false       |
-| prefecture-id             | string     | null: false       |
-| scheduled_delivert        | string     | null: false       |
+| category_id               | integer    | null: false       |
+| sales-status_id           | integer    | null: false       |
+| info                      | text       | null: false       |
+| shipping_free-status_id   | integer     | null: false       |
+| prefecture_id             | integer     | null: false       |
+| scheduled_delivert_id     | integer     | null: false       |
 | price                     | integer    | null: false       |
 | user                      | references | foreign_key: true |
 
@@ -54,11 +54,11 @@
 | Column      | Type       | Options           |
 |-------------|------------|-------------------|
 | postal_code | string     | null: false       |
-| prefecture  | string     | null: false       |
+|prefecture_id| integer    | null: false       |
 | city        | string     | null: false       |
 | addresses   | string     | null: false       |
-| building    | string     | null: false       |
-| phone_number| integer    | null: false       |
+| building    | string     |                   |
+| phone_number| string     | null: false       |
 | order       | references | foreign_key: true |
 
 
