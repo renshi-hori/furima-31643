@@ -33,7 +33,7 @@
 | category_id               | integer    | null: false       |
 | sales-status_id           | integer    | null: false       |
 | info                      | text       | null: false       |
-| shipping_free-status_id   | integer     | null: false       |
+| shipping_free_status_id   | integer     | null: false       |
 | prefecture_id             | integer     | null: false       |
 | scheduled_delivert_id     | integer     | null: false       |
 | price                     | integer    | null: false       |
