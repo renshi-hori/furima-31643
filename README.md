@@ -31,7 +31,7 @@
 |--------------------------------|------------|-------------------|
 | name                      | string     | null: false       |
 | category_id               | integer    | null: false       |
-| sales-status_id           | integer    | null: false       |
+| sales_status_id           | integer    | null: false       |
 | info                      | text       | null: false       |
 | shipping_free_status_id   | integer     | null: false       |
 | prefecture_id             | integer     | null: false       |
