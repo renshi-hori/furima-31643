@@ -24,28 +24,28 @@ require 'rails_helper'
       expect(@item.errors.full_messages).to include("Info can't be blank")
      end
      it "カテゴリーの情報が必須であること" do
-      @item.category = nil
+      @item.category = 0
       @item.valid?
       expect(@item.errors.full_messages).to include("Category is not a number")
      end
      it "商品の状態についての情報が必須であること" do
-      @item.sales_status = nil
+      @item.sales_status = 0
       @item.valid?
       expect(@item.errors.full_messages).to include("Sales status is not a number")
      end
      it "配送料の負担についての情報が必須であること" do
-      @item.shipping_free_status = nil
+      @item.shipping_free_status = 0
       @item.valid?
       expect(@item.errors.full_messages).to include("Shipping free status is not a number")
      end
      it "発送元の地域についての情報が必須であること" do
-      @item.prefecture = nil
+      @item.prefecture = 0
       @item.valid?
       expect(@item.errors.full_messages).to include("Prefecture is not a number")
       
      end
      it "発送までの日数についての情報が必須であること" do
-      @item.scheduled_delivert = nil
+      @item.scheduled_delivert = 0
       @item.valid?
       expect(@item.errors.full_messages).to include("Scheduled delivert is not a number")
      end
@@ -55,7 +55,7 @@ require 'rails_helper'
       expect(@item.errors.full_messages).to include("Price can't be blank")
      end
      it "価格の範囲が、¥300円未満であると登録できない" do
-      @item.price = 1
+      @item.price = 299
       @item.valid?
       expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
 
