@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
     @order_address = OrderAddress.new
   end
   def create
-    binding.pry
     @item = Item.find(params[:item_id])
     @order_address = OrderAddress.new(order_address_params)
     if @order_address.valid?
