@@ -8,8 +8,15 @@ require 'rails_helper'
      it "正しい値が入力されれば正しく登録される" do
       expect(@order_address).to be_valid
       end
+
+     it "建物名が空でも購入できる" do
+        @order_address.building = ""
+        expect(@order_address).to be_valid
+
+        end
+
      it "郵便番号が必須でなおかつハイフンがないと購入できない" do
-      @order_address.postal_code = 1234566
+      @order_address.postal_code = "1234566"
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include("Postal code ハイフンを使用してください")
      end
@@ -57,6 +64,15 @@ require 'rails_helper'
       expect(@order_address.errors.full_messages).to include("Token can't be blank")
 
      end
+     it "郵便番号は空だと購入できない" do
+      @order_address.postal_code = nil
+      @order_address.valid?
+      expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
+
+     end
+
+
+
     
      
      
